@@ -5,6 +5,7 @@
 
 # User-specific files
 *.rsuser
+node_modules
 *.suo
 *.user
 *.userosscache
