@@ -40,30 +40,16 @@ export class DocumentList{
             let head = "";
             let body = "";
 
-        
-             let button = document.createElement("input");
-             button.type = "submit";
-             button.value = "Usuń";
-             button.setAttribute("data-id", key);
-
-
-             button.addEventListener("click", () => {
-                 
-                let id =  button.getAttribute("data-id") 
-                this.removeDocument(id);
-             })
-
             Object.keys(Json).forEach(function(k){
                 head += "<th>" + k + "</th>" ;
                 body += "<td>" + Json[k] +  "</td>" ;
             });
 
-            let str = "<a href='edit-document.html?id="+key+"'>Edytuj</a><table id='"+key+"'><tr><th>id</th>"+ head + "</tr><tr><td>"+
+            let str = "<button class='edit' data-id='"+key+"'>Edytuj</button><button class='delete' data-id='"+key+"'>Usuń</button><table id='"+key+"'><tr><th>id</th>"+ head + "</tr><tr><td>"+
             key+"</td>"+ body + "</tr></table>"
                 res += str;
                 
             document.getElementById("documents").innerHTML = res;
-            document.getElementById(key).appendChild(button);
 
             });
         

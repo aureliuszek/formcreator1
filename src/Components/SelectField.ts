@@ -26,7 +26,6 @@ export class SelectField implements Field{
         
         this.element = document.createElement("select");
         this.element.setAttribute("name", this.name);
-        this.element.value = this.value;  
         
         for(let i = 0; i < this.options.length; i++){
             var option = document.createElement("option");
@@ -34,6 +33,7 @@ export class SelectField implements Field{
             option.innerText = this.options[i];
         }
 
+        this.element.value = this.value;  
         let l = document.createElement("div");
         l.setAttribute("name", this.name);
         l.appendChild(this.labelV);

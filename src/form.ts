@@ -44,7 +44,6 @@ export class Form {
       }
 
       save(){
-        console.log(this.getValue())
         let loc = new LocStorage();
         loc.saveDocument(this.getValue());
         window.location.href = "index.html";
