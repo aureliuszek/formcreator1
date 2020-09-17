@@ -9,7 +9,7 @@ import {Field} from '../src/Components/Field';
 import { LocStorage } from './locStorage';
 
 export class Form {
-     fieldsArray : Field[] = [new DateField("Data formularza") ,new InputField("Imię"), new InputField("Nazwisko"), new EmailField("Email"), new SelectField("Wybrany kierunek studiów" , ["Informatyka", "Ekonometria", "Zarządzanie"]), new CheckboxField("Czy Preferujesz e-learning?"),new TextAreaField("Uwagi")];
+     fieldsArray : Field[] = [new InputField("Imię"), new InputField("Nazwisko"), new EmailField("Email"), new SelectField("Wybrany kierunek studiów" , ["Informatyka", "Ekonometria", "Zarządzanie"]), new CheckboxField("Czy Preferujesz e-learning?"),new TextAreaField("Uwagi")];
 
        render(): any{
         

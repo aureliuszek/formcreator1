@@ -23,7 +23,7 @@ export class TextAreaField implements Field{
         this.labelV = this.label.labelShow(this.name);
         this.element = document.createElement("textarea");
         this.element.setAttribute("name", this.name)
-    this.element.innerText = this.value;
+        this.element.innerText = this.value;
         let l = document.createElement("div");
         l.setAttribute("name", this.name);
         l.appendChild(this.labelV);

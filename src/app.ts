@@ -58,7 +58,7 @@ window.onload = () => {
 
     
     if(page == "edit-document.html"){
-        let id = Router.getParm("id");
+        let id = Router.getParam("id");
         let jsn = JSON.parse(myClass.documentList.getDocument(id));
         let main = document.getElementById("main");
 
